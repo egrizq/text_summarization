@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+</head> 
+
+<style>
+	body {
+		background-color: #0e1320;
+		color:white;
+		font-family: "Cascadia Mono";
+	}
+
+	.box, .box:focus {
+		border: 0px;
+		border-radius: 10px;
+		color: rgb(255, 255, 255);
+		background-color: #1F2937;
+	}
+
+	.btn, .btn:hover, .btn:active {
+		background-color: #3b495c;
+		color:white;
+	}
+
+	.btn:hover, .btn:active {
+		background-color: #4f6380;
+		color:white;
+	}
+
+</style>
+<body> 
+	<div class="container-fluid">
+		<div class="row" style="padding-top: 5vh;">
+			<div class="col-2">
+			</div>
+
+			<div class="col-8">
+				<p class="h2">Text Summarization</p>
+				<p>
+					Melalui space ini kalian bisa mendapatkan kesimpulan dalam <u>Bahasa Indonesia</u> berdasarkan text <u>Berbahasa Inggris</u>.
+				</p>
+
+				<p>Dibuat oleh Muhammad Rizq Ramadhan</p>
+			</div>
+		</div>
+
+        <div class="row">
+            <div class="col-2 text-end">
+				<button class="btn mb-2" onclick="text1()">Text 1</button><br>
+				<button class="btn mb-2" onclick="text2()">Text 2</button><br>
+				<button class="btn mb-2" onclick="text3()">Text 3</button>
+			</div>
+
+            <div class="col-4">
+                <div class="form-floating">
+					<div class="form-floating mb-3">
+						<textarea class="form-control box shadow-lg" placeholder="Leave a comment here" id="text" style="height: 400px;"></textarea>
+						<label for="floatingInput">Text</label>
+					</div>
+
+                    <div>
+                        <button class="btn" id="generate" style="width: 64vh;">Simpulkan</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-floating">
+					<div class="form-floating mb-3">
+                    	<textarea class="form-control box shadow-lg" placeholder="Leave a comment here" id="summary" style="height: 200px;"></textarea>
+						<label for="floatingInput">Kesimpulan</label>
+					</div>
+                </div>
+				<p id="process"></p>
+            </div>
+            
+        </div>
+    </div>
+
+
+<script src="/static/main.js"></script>
+	
+</body> 
+</html> 
