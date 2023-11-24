@@ -2,7 +2,7 @@ from transformers import pipeline
 from googletrans import Translator
 import torch
 import time
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__, template_folder="templates")
 
@@ -27,21 +27,20 @@ def hello():
 
 @app.route('/process', methods=['POST'])
 def process():
-    data = request.get_json()  # retrieve the data sent from JavaScript
-    # process the data using Python code
-    ARTICLE = data['text']
     start_time = time.time()
+
+    data = request.get_json()
+    ARTICLE = data['text']
 
     result = summarizer(ARTICLE, max_length=len(ARTICLE.split(" ")))
     result = result[0]["summary_text"]
     result = translate_text(result)
 
+    bahasa = translate_text(result)
+
     end_time = time.time()
     elapsed_time = f"Membutuhkan waktu sekitar {round(end_time - start_time)} detik untuk process"
 
-    bahasa = translate_text(result)
-
-    # return the result to JavaScript
     response = {"result": bahasa, "time": elapsed_time}
 
     return response

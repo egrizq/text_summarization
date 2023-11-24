@@ -32,10 +32,18 @@
 		color:white;
 	}
 
+	.load-background {
+		display: none;
+	}
+
+	.load {
+		display: none;
+	}
+
 </style>
 <body> 
 	<div class="container-fluid">
-		<div class="row" style="padding-top: 5vh;">
+		<div class="row" style="padding-top: 3vh;">
 			<div class="col-2">
 			</div>
 
@@ -64,7 +72,11 @@
 					</div>
 
                     <div>
-                        <button class="btn" id="generate" style="width: 64vh;">Simpulkan</button>
+                        <button class="btn" id="generate" style="width: 64vh; height: 38px;">Simpulkan</button>
+
+						<div class="d-flex justify-content-center load-background rounded-2">
+							<div class="spinner-border load" role="status"></div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -81,7 +93,6 @@
             
         </div>
     </div>
-
 
 <script src="/static/main.js"></script>
 	
