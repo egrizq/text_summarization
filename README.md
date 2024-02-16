@@ -21,3 +21,9 @@ Prerequisites:
   - Torch
   - Transformers (Hugging Face)
   - Google Trans
+
+## Demo
+![TextSummarizationDibuatdenganClipchamp-ezgif com-video-to-gif-converter](https://github.com/egrizq/text_summarization/assets/138362648/9b8d1c0e-9d69-44ce-8e1d-5136cf71e96a)
+
+
+
