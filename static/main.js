@@ -27,7 +27,7 @@ generate.addEventListener("click", function() {
 	xhr.onloadend = function() {
 		if (xhr.status === 200) {
 			const response = JSON.parse(xhr.responseText)
-			summary.innerHTML = response.result
+			summary.innerHTML = response.text
 			process.innerHTML = response.time
 
 			setTimeout(function() {

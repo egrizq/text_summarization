@@ -17,7 +17,6 @@ Prerequisites:
 - Python installation
 - Boostrap CDN as a CSS framework
 - Library to support:
-  - TensorFlow
   - Torch
   - Transformers (Hugging Face)
   - Google Trans
