@@ -32,8 +32,8 @@ def process():
     english = summarizer(REQUEST_TEXT, max_length=len(REQUEST_TEXT.split(" ")))
     english = english[0]["summary_text"]
 
-    # this continue, since googletrans need token
-    bahasa = translate_text(english)
+    # discontinue, since googletrans need token
+    # bahasa = translate_text(english)
 
     end_time = time.time()
     elapsed_time = f"Membutuhkan waktu sekitar {round(end_time - start_time)} detik untuk process"
